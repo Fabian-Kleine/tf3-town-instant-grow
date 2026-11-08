@@ -16,9 +16,9 @@
 	"de": {
 		"Instant Growth": "Sofortiges Wachstum",
 		"Current Population": "Aktuelle Bevölkerung",
-		"Target capacities (res / com / ind)": "Zielkapazitäten (Wohnen / Gewerbe / Industrie)",
-		"Kept at this size: demolished buildings are rebuilt.": "Größe wird gehalten: Abgerissene Gebäude werden wieder aufgebaut.",
-		"Not kept yet. Grow once to keep this town's size.": "Wird noch nicht gehalten. Einmal wachsen lassen, um die Größe der Stadt zu halten.",
+		"Target capacities (res / com / ind)": "Zielkapazitäten (Wohn. / Gew. / Ind.)",
+		"Kept at this size: demolished buildings are rebuilt.": "Größe wird gehalten. Abgerissenes wird neu gebaut.",
+		"Not kept yet. Grow once to keep this town's size.": "Noch nicht gehalten. Einmal wachsen lassen.",
 		"Grow": "Wachsen",
 		"Grow the town by one step (target x1.5) and build right away": "Lässt die Stadt um einen Schritt wachsen (Ziel x1,5) und baut sofort",
 		"Grow x5": "Wachsen x5",
