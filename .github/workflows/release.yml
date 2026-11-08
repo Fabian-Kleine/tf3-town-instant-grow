@@ -21,7 +21,7 @@ jobs:
 
       - name: Check JSON files
         run: |
-          for f in "$MOD_DIR/mod.json" "$MOD_DIR/_metadata/modinfo.json"; do
+          for f in "$MOD_DIR/mod.json" "$MOD_DIR/_metadata/modinfo.json" "$MOD_DIR/strings.json"; do
             python3 -m json.tool "$f" > /dev/null
           done
 

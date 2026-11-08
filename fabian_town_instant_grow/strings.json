@@ -1,0 +1,30 @@
+{
+	"en": {
+		"Instant Growth": "Instant Growth",
+		"Current Population": "Current Population",
+		"Target capacities (res / com / ind)": "Target capacities (res / com / ind)",
+		"Kept at this size: demolished buildings are rebuilt.": "Kept at this size: demolished buildings are rebuilt.",
+		"Not kept yet. Grow once to keep this town's size.": "Not kept yet. Grow once to keep this town's size.",
+		"Grow": "Grow",
+		"Grow the town by one step (target x1.5) and build right away": "Grow the town by one step (target x1.5) and build right away",
+		"Grow x5": "Grow x5",
+		"Grow the town by five steps at once": "Grow the town by five steps at once",
+		"Allow New Streets": "Allow New Streets",
+		"Stop Keeping": "Stop Keeping",
+		"Stop rebuilding this town to its size. The town keeps its current target.": "Stop rebuilding this town to its size. The town keeps its current target."
+	},
+	"de": {
+		"Instant Growth": "Sofortiges Wachstum",
+		"Current Population": "Aktuelle Bevölkerung",
+		"Target capacities (res / com / ind)": "Zielkapazitäten (Wohnen / Gewerbe / Industrie)",
+		"Kept at this size: demolished buildings are rebuilt.": "Größe wird gehalten: Abgerissene Gebäude werden wieder aufgebaut.",
+		"Not kept yet. Grow once to keep this town's size.": "Wird noch nicht gehalten. Einmal wachsen lassen, um die Größe der Stadt zu halten.",
+		"Grow": "Wachsen",
+		"Grow the town by one step (target x1.5) and build right away": "Lässt die Stadt um einen Schritt wachsen (Ziel x1,5) und baut sofort",
+		"Grow x5": "Wachsen x5",
+		"Grow the town by five steps at once": "Lässt die Stadt um fünf Schritte auf einmal wachsen",
+		"Allow New Streets": "Neue Straßen erlauben",
+		"Stop Keeping": "Nicht mehr halten",
+		"Stop rebuilding this town to its size. The town keeps its current target.": "Die Stadt wird nicht mehr auf ihre Größe aufgebaut. Sie behält ihre aktuellen Zielkapazitäten."
+	}
+}

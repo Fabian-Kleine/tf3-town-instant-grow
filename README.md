@@ -55,6 +55,7 @@ Open a town window in sandbox mode and go to the **Editor** tab. The **Instant G
 | `content/town_instant_grow/town_instant_grow_eow.res.lua` | Registers the card on `TownEowEditorExtensionPoint`, with the base game's `isSandboxMode` condition |
 | `content/town_instant_grow/town_instant_grow_eow.script.lua` | The card (GUI side) |
 | `content/town_instant_grow/town_instant_grow_common.lua` | Event names and tuning values (grow factor, check interval, burst sizes) |
+| `strings.json` | English and German texts of the card. The keys are the English texts the card passes to `_()` |
 
 Growth uses the same value as the base **Target District Capacities** card (`makeTownSetInitialLandUseCapacitiesCmd`), so you can still fine-tune a town there. The mod follows your edits instead of overwriting them. If you switch off **Enable Town Development** there, the mod leaves the town paused.
 
