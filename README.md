@@ -1,10 +1,10 @@
-# Boomtown: Instant Town Growth
+# Town: Instant Grow
 
 A Transport Fever 3 script mod. Grow sandbox towns with one click, without building any transport. A grown town keeps its size: if you demolish buildings (for example to lay out streets), it rebuilds them.
 
 ## Download
 
-Get the latest `boomtown-<version>.zip` from the [Releases page](https://github.com/Fabian-Kleine/tf3-boomtown/releases/latest).
+Get the latest `town-instant-grow-<version>.zip` from the [Releases page](https://github.com/Fabian-Kleine/tf3-town-instant-grow/releases/latest).
 
 ## Install
 
@@ -16,16 +16,16 @@ Get the latest `boomtown-<version>.zip` from the [Releases page](https://github.
    ```
 
 3. Open the `staging_area` folder inside it (create it if it doesn't exist).
-4. Extract the zip there. The zip already contains the `fabian_boomtown` folder, so you should end up with:
+4. Extract the zip there. The zip already contains the `fabian_town_instant_grow` folder, so you should end up with:
 
    ```
-   ...\3493540\local\staging_area\fabian_boomtown\mod.json
+   ...\3493540\local\staging_area\fabian_town_instant_grow\mod.json
    ```
 
-   If you see `fabian_boomtown\fabian_boomtown\mod.json`, move the inner folder up one level.
-5. Start the game, create or load a **sandbox** game, and enable **Boomtown: Instant Town Growth** in the mod list.
+   If you see `fabian_town_instant_grow\fabian_town_instant_grow\mod.json`, move the inner folder up one level.
+5. Start the game, create or load a **sandbox** game, and enable **Town: Instant Grow** in the mod list.
 
-To update, delete the old `fabian_boomtown` folder and extract the new zip the same way. To uninstall, delete the folder. Towns keep their current size when you remove the mod from a savegame.
+To update, delete the old `fabian_town_instant_grow` folder and extract the new zip the same way. To uninstall, delete the folder. Towns keep their current size when you remove the mod from a savegame.
 
 The staging area is the only folder for local mods the official docs name so far. It is meant for mod development, and a copy there wins over a published copy with the same id.
 
@@ -44,11 +44,11 @@ Open a town window in sandbox mode and go to the **Editor** tab. The **Instant G
 
 | File | Role |
 |---|---|
-| `content/boomtown/boomtown.gs.lua` | Registers the game script |
-| `content/boomtown/boomtown.script.lua` | Engine side: handles the grow events, remembers grown towns in its saved state, checks them every 100 simulation updates and fires develop commands when built capacity is below target |
-| `content/boomtown/boomtown_eow.res.lua` | Registers the card on `TownEowEditorExtensionPoint`, with the base game's `isSandboxMode` condition |
-| `content/boomtown/boomtown_eow.script.lua` | The card (GUI side) |
-| `content/boomtown/boomtown_common.lua` | Event names and tuning values (grow factor, check interval, burst sizes) |
+| `content/town_instant_grow/town_instant_grow.gs.lua` | Registers the game script |
+| `content/town_instant_grow/town_instant_grow.script.lua` | Engine side: handles the grow events, remembers grown towns in its saved state, checks them every 100 simulation updates and fires develop commands when built capacity is below target |
+| `content/town_instant_grow/town_instant_grow_eow.res.lua` | Registers the card on `TownEowEditorExtensionPoint`, with the base game's `isSandboxMode` condition |
+| `content/town_instant_grow/town_instant_grow_eow.script.lua` | The card (GUI side) |
+| `content/town_instant_grow/town_instant_grow_common.lua` | Event names and tuning values (grow factor, check interval, burst sizes) |
 
 Growth uses the same value as the base **Target District Capacities** card (`makeTownSetInitialLandUseCapacitiesCmd`), so you can still fine-tune a town there. The mod follows your edits instead of overwriting them. If you switch off **Enable Town Development** there, the mod leaves the town paused.
 
@@ -59,7 +59,7 @@ A town that can't reach its target (no free land) stops getting develop commands
 With a real town entity id (shown in the debug info or via `api.engine.util.town.getClosestTown`):
 
 ```lua
-api.cmd.sendCommand(api.cmd.makeScriptingSendEventCmd("", "Boomtown", "Boomtown_grow", { town = 123, steps = 1, allowStreets = true }))
+api.cmd.sendCommand(api.cmd.makeScriptingSendEventCmd("", "TownInstantGrow", "TownInstantGrow_grow", { town = 123, steps = 1, allowStreets = true }))
 ```
 
 ## Releasing
@@ -71,7 +71,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-Raise `revision` in `fabian_boomtown/mod.json` before tagging a new version.
+Raise `revision` in `fabian_town_instant_grow/mod.json` before tagging a new version.
 
 ## Not done / unverified
 

@@ -1,10 +1,10 @@
 {
-    "name": "Boomtown: Instant Town Growth",
+    "name": "Town: Instant Grow",
     "summary": "Grow sandbox towns with one click. Grown towns rebuild demolished buildings on their own.",
     "description": "Adds an Instant Growth card to the Editor tab of the town window in sandbox mode.\n\nGrow raises the town's target district capacities and builds new buildings right away, without any cargo or passenger deliveries. Grow x5 does five steps at once.\n\nThe mod remembers every town you grew. If you demolish buildings, for example to lay out new streets, the town rebuilds them back to the size you chose. Stop Keeping releases a town again.\n\nAllow New Streets lets the town lay out new streets while it grows. Turn it off if the town should only build along streets you made yourself.\n\nThe card only shows in sandbox mode. Removing the mod from a savegame keeps the towns at their current size.",
     "localization": {
         "de": {
-            "name": "Boomtown: Sofortiges Stadtwachstum",
+            "name": "Stadt: Sofortwachstum",
             "summary": "Lass Städte im Sandbox-Modus per Klick wachsen. Abgerissene Gebäude bauen sie selbst wieder auf.",
             "description": "Fügt im Sandbox-Modus eine Karte \"Sofortiges Wachstum\" zum Editor-Tab des Stadtfensters hinzu.\n\nWachsen erhöht die angestrebten Gebietskapazitäten der Stadt und baut sofort neue Gebäude, ganz ohne Güter- oder Passagierlieferungen. Wachsen x5 macht fünf Schritte auf einmal.\n\nDie Mod merkt sich jede Stadt, die du wachsen lässt. Reißt du Gebäude ab, zum Beispiel für neue Straßen, baut die Stadt sie bis zur gewählten Größe wieder auf. Nicht mehr halten gibt eine Stadt wieder frei.\n\nNeue Straßen erlauben lässt die Stadt beim Wachsen eigene Straßen anlegen. Schalte es aus, wenn die Stadt nur an deinen eigenen Straßen bauen soll.\n\nDie Karte erscheint nur im Sandbox-Modus. Wird die Mod aus einem Spielstand entfernt, behalten die Städte ihre aktuelle Größe."
         }

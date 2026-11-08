@@ -1,17 +1,17 @@
--- Shared names and settings of the Boomtown mod.
+-- Shared names and settings of the Town: Instant Grow mod.
 -- Loaded by the game script and by the town window card with
--- ug_require "fabian_boomtown::/boomtown/boomtown_common.lua"
+-- ug_require "fabian_town_instant_grow::/town_instant_grow/town_instant_grow_common.lua"
 
 local common = {}
 
 -- Resource name of the game script, used by the GUI to read its state.
-common.gameScriptName = "fabian_boomtown::/boomtown/boomtown.gs"
+common.gameScriptName = "fabian_town_instant_grow::/town_instant_grow/town_instant_grow.gs"
 
 -- Script event id and names. The GUI sends them with makeScriptingSendEventCmd.
-common.eventId = "Boomtown"
-common.eventGrow = "Boomtown_grow"
-common.eventRelease = "Boomtown_release"
-common.eventSetStreets = "Boomtown_setStreets"
+common.eventId = "TownInstantGrow"
+common.eventGrow = "TownInstantGrow_grow"
+common.eventRelease = "TownInstantGrow_release"
+common.eventSetStreets = "TownInstantGrow_setStreets"
 
 -- Each grow step multiplies the target district capacities by this factor.
 common.growFactor = 1.5

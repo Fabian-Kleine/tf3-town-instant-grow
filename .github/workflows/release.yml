@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 env:
-  MOD_DIR: fabian_boomtown
+  MOD_DIR: fabian_town_instant_grow
 
 jobs:
   build:
@@ -38,7 +38,7 @@ jobs:
           else
             version="dev-${GITHUB_SHA::7}"
           fi
-          name="boomtown-${version}.zip"
+          name="town-instant-grow-${version}.zip"
           mkdir -p dist
           zip -r -X "dist/${name}" "$MOD_DIR"
           echo "name=${name}" >> "$GITHUB_OUTPUT"
@@ -55,5 +55,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" "dist/${{ steps.zip.outputs.name }}" \
-            --title "Boomtown $GITHUB_REF_NAME" \
+            --title "Town: Instant Grow $GITHUB_REF_NAME" \
             --generate-notes

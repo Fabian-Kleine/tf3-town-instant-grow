@@ -1,12 +1,12 @@
 -- "Instant Growth" card in the Editor tab of the town window (GUI state).
--- Registered by boomtown_eow.res.lua; only shown in sandbox mode.
+-- Registered by town_instant_grow_eow.res.lua; only shown in sandbox mode.
 
 local react = ug_require "::/gui/main/react.lua"
 local builtin = ug_require "::/gui/main/builtin.lua"
 local engine_react_util = ug_require "::/gui/main/engine_react_util.tl"
 local town_eow = ug_require "::/gui/entity_window/town/town_eow.script.tl"
 
-local common = ug_require "fabian_boomtown::/boomtown/boomtown_common.lua"
+local common = ug_require "fabian_town_instant_grow::/town_instant_grow/town_instant_grow_common.lua"
 
 local function readRecord(townEntity)
 	local ok, record = pcall(function()
@@ -65,7 +65,7 @@ local function textButton(text, tooltip, enabled, onClick)
 	}
 end
 
-local BoomtownCard = react.RegisterPluginRecipe(town_eow.TownEowEditorExtensionPoint, "BoomtownCard", function(params)
+local TownInstantGrowCard = react.RegisterPluginRecipe(town_eow.TownEowEditorExtensionPoint, "TownInstantGrowCard", function(params)
 	local townEntity = params.entityId
 
 	-- Hooks first, always in the same order.
@@ -133,7 +133,7 @@ local BoomtownCard = react.RegisterPluginRecipe(town_eow.TownEowEditorExtensionP
 end)
 
 local result = {
-	BoomtownCard = BoomtownCard,
+	TownInstantGrowCard = TownInstantGrowCard,
 }
 
 function data()

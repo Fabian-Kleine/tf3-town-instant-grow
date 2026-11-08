@@ -1,14 +1,14 @@
--- Game script of the Boomtown mod (engine state).
+-- Game script of the Town: Instant Grow mod (engine state).
 --
 -- Events (sent from the town window card, or from the console):
---   Boomtown / Boomtown_grow       { town = <entity>, steps = <n>, allowStreets = <bool> }
---   Boomtown / Boomtown_release    { town = <entity> }
---   Boomtown / Boomtown_setStreets { town = <entity>, allowStreets = <bool> }
+--   TownInstantGrow / TownInstantGrow_grow       { town = <entity>, steps = <n>, allowStreets = <bool> }
+--   TownInstantGrow / TownInstantGrow_release    { town = <entity> }
+--   TownInstantGrow / TownInstantGrow_setStreets { town = <entity>, allowStreets = <bool> }
 --
 -- State: { version = 1, lastCheck = <updateCount>, towns = { ["t<townEntity>"] = TownRecord } }
 -- TownRecord: { town = <entity>, target = {res, com, ind}, allowStreets = <bool> }
 
-local common = ug_require "fabian_boomtown::/boomtown/boomtown_common.lua"
+local common = ug_require "fabian_town_instant_grow::/town_instant_grow/town_instant_grow_common.lua"
 
 local STATE_VERSION = 1
 
@@ -34,7 +34,7 @@ local function send(makeCmd)
 		api.cmd.sendCommand(makeCmd())
 	end)
 	if not ok then
-		debugPrint("[fabian_boomtown] command failed: " .. tostring(err))
+		debugPrint("[fabian_town_instant_grow] command failed: " .. tostring(err))
 	end
 end
 
