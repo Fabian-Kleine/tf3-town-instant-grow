@@ -1,6 +1,12 @@
 # Town: Instant Grow
 
+![Town: Instant Grow](fabian_town_instant_grow/_metadata/0.png)
+
 A Transport Fever 3 script mod. Grow sandbox towns with one click, without building any transport. A grown town keeps its size: if you demolish buildings (for example to lay out streets), it rebuilds them.
+
+Compatible with [Town Zoning](https://mod.io/g/transportfever3/m/town-zoning).
+
+![The Instant Growth card in the town window](fabian_town_instant_grow/_metadata/1.png)
 
 ## Download
 
@@ -73,8 +79,4 @@ git push origin v1.0.0
 
 Raise `revision` in `fabian_town_instant_grow/mod.json` before tagging a new version.
 
-## Not done / unverified
-
-- Not run in the game yet. All API calls come from the official TF3 scripting reference (tf3-docs.transportfever.net, version 2026.10.23.2), but the docs don't show the source of every function.
-- The town **level** shown in the town window does not rise. The base growth script owns that state; it handles an `addExperiencePercentage` event (used by subsidy rewards), but its parameter shape isn't documented, so the mod doesn't send it yet.
-- Whether the game loads a plain-Lua script referenced as `file.script@fn` through the returned table or through `data()` isn't documented. Every script file supports both.
+The store images live in `fabian_town_instant_grow/_metadata/`: `0.png` is the cover in the mod browser grid, `1.png` and up are the gallery. All are 1920x1080 PNG, at most 8 MB each.
