@@ -1,0 +1,14 @@
+{
+    "modId": "fabian_boomtown",
+    "revision": 1,
+    "dependencies": null,
+    "incompatibilities": null,
+    "params": null,
+    "preRunScript": { "fileName": "" },
+    "runScript": { "fileName": "" },
+    "postRunScript": { "fileName": "" },
+    "severityAdd": "None",
+    "severityRemove": "Warning",
+    "cosmetic": false,
+    "visible": true
+}

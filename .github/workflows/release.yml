@@ -1,0 +1,59 @@
+name: Build mod zip
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  MOD_DIR: fabian_boomtown
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check JSON files
+        run: |
+          for f in "$MOD_DIR/mod.json" "$MOD_DIR/_metadata/modinfo.json"; do
+            python3 -m json.tool "$f" > /dev/null
+          done
+
+      - name: Check Lua syntax
+        run: |
+          sudo apt-get install -y --no-install-recommends lua5.4 > /dev/null
+          find "$MOD_DIR" -name '*.lua' -print0 | xargs -0 -n1 luac5.4 -p
+
+      - name: Build zip
+        id: zip
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            version="${GITHUB_REF_NAME}"
+          else
+            version="dev-${GITHUB_SHA::7}"
+          fi
+          name="boomtown-${version}.zip"
+          mkdir -p dist
+          zip -r -X "dist/${name}" "$MOD_DIR"
+          echo "name=${name}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.zip.outputs.name }}
+          path: dist/${{ steps.zip.outputs.name }}
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" "dist/${{ steps.zip.outputs.name }}" \
+            --title "Boomtown $GITHUB_REF_NAME" \
+            --generate-notes
