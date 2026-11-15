@@ -26,6 +26,13 @@ common.maxCapacity = 20000
 -- Number of develop commands fired right after a grow step (instant buildings).
 common.burstDevelopCount = 24
 
+-- With "Allow New Streets" off, develop commands only go to points on existing streets.
+-- Each one builds less there, so this many times more are fired.
+common.noStreetsCountFactor = 2
+
+-- Radius (in meters) around a random town point to look for an existing street.
+common.streetSearchRadius = 150
+
 -- How often (in simulation updates) grown towns are checked for missing buildings.
 common.maintenanceInterval = 100
 

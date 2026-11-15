@@ -46,8 +46,15 @@ Open a town window in sandbox mode and go to the **Editor** tab. The **Instant G
 |---|---|
 | Grow | Target district capacities x1.5, development on, buildings upgrade and spawn right away |
 | Grow x5 | Five steps at once (about x7.6) |
-| Allow New Streets | Lets the town lay out its own streets while growing. Off: it only builds along existing streets |
+| Allow New Streets | Lets the town lay out its own streets while growing. Off: the mod switches the town's development off and builds only along existing streets (see below) |
 | Stop Keeping | The mod stops rebuilding this town. Its target capacities stay where they are |
+
+### Growing without new streets
+
+The base game's town development lays out new streets on its own whenever a town is below its target, so a script can't just tell it to skip streets. With **Allow New Streets** off, the mod switches **Enable Town Development** off for that town and does all the growing itself, with develop calls at points on existing streets. This is slower than normal growth, and existing buildings upgrade less.
+
+- Switching **Enable Town Development** back on in the base card turns **Allow New Streets** back on too, and the town grows the normal way again.
+- **Stop Keeping** leaves development off, so the town stays as it is. Switch it on in the base card if you want the town to grow normally again.
 
 ## How it works
 
